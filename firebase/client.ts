@@ -6,13 +6,13 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCXkwsH2J_lnXSEFPylr-LnXPgMacE5_So",
-  authDomain: "prepmate-39c8f.firebaseapp.com",
-  projectId: "prepmate-39c8f",
-  storageBucket: "prepmate-39c8f.firebasestorage.app",
-  messagingSenderId: "191758185888",
-  appId: "1:191758185888:web:c57f0baf0caea8b570e0c5",
-  measurementId: "G-16HKCBZT11",
+  apiKey: process.env.FIREBASE_CLIENT_API_KEY,
+  authDomain: process.env.FIREBASE_CLIENT_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_CLIENT_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_CLIENT_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_CLIENT_APP_ID,
+  measurementId: process.env.FIREBASE_CLIENT_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
