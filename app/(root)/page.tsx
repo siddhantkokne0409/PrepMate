@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import InterviewCard from "@/components/InterviewCard";
 
-import { getCurrentUser } from "@/lib/actions/auth.action";
+import { getCurrentUser, signOut } from "@/lib/actions/auth.action";
 import {
   getInterviewsByUserId,
   getLatestInterviews,
@@ -29,10 +29,14 @@ const Page = async () => {
           <p className="text-lg">
             Practice real interview questions & get instant feedback
           </p>
-
-          <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Start an Interview</Link>
-          </Button>
+          <div className="flex gap-6">
+            <Button asChild className="btn-primary max-sm:w-full">
+              <Link href="/interview">Start an Interview</Link>
+            </Button>
+            <Button onClick={signOut} className="btn-primary max-sm:w-full">
+              Sign Out
+            </Button>
+          </div>
         </div>
         <Image
           src="/personInterview.png"
