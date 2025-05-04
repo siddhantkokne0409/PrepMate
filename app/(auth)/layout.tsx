@@ -1,8 +1,10 @@
-import {ReactNode} from 'react'
+import { ReactNode, Suspense } from "react";
 
-const AuthLayout = ({children}: { children: ReactNode }) => {
-    return (
-        <div className={"auth-layout"}>{children}</div>
-    )
-}
-export default AuthLayout
+const AuthLayout = ({ children }: { children: ReactNode }) => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className={"auth-layout"}>{children}</div>
+    </Suspense>
+  );
+};
+export default AuthLayout;

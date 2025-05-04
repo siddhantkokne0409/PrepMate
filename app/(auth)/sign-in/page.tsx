@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import AuthForm from "../../../components/AuthForm";
 import { useRouter, useSearchParams } from "next/navigation";
